@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.colibrihub'
-version = '1.0.0'
+version = '1.0.0'  // Cambia de SNAPSHOT a una versión estable
 
 repositories {
     mavenCentral()
@@ -22,58 +22,16 @@ test {
     useJUnitPlatform()
 }
 
-// Configuración de publicación
+// Configuración necesaria para JitPack
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
             from components.java
-            
-            // Información del artefacto
-            artifactId = 'shared-dtos'
-            
-            pom {
-                name = 'Shared DTOs'
-                description = 'DTOs compartidos para proyectos Java'
-                url = 'https://github.com/tu-usuario/shared-dtos'
-                
-                licenses {
-                    license {
-                        name = 'MIT License'
-                        url = 'https://opensource.org/licenses/MIT'
-                    }
-                }
-                
-                developers {
-                    developer {
-                        id = 'tu-id'
-                        name = 'Tu Nombre'
-                        email = 'tu.email@ejemplo.com'
-                    }
-                }
-                
-                scm {
-                    connection = 'scm:git:git://github.com/tu-usuario/shared-dtos.git'
-                    developerConnection = 'scm:git:ssh://github.com/tu-usuario/shared-dtos.git'
-                    url = 'https://github.com/tu-usuario/shared-dtos'
-                }
-            }
         }
     }
-    
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/tu-usuario/shared-dtos")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
-        }
-    }
-}
-
-// Generar JAR con código fuente
-java {
-    withSourcesJar()
-    withJavadocJar()
 }
