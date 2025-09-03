@@ -4,21 +4,15 @@ plugins {
 }
 
 group = 'com.colibrihub'
-version = '1.0.12'  // Cambia de SNAPSHOT a una versión estable
+version = '1.0.12'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation platform('org.springframework.boot:spring-boot-dependencies:3.1.2')
-
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'org.springframework.boot:spring-boot-starter:3.1.2'
-    compileOnly 'org.projectlombok:lombok:1.18.28'
-    annotationProcessor 'org.projectlombok:lombok:1.18.28'
-
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
 }
 
 test {
