@@ -24,14 +24,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SimpleUserDto {
     /**
-     * <h5>ID</h5>
+     * <b>ID</b>
      * <p>
-     *     Este campo representa la clave primaria dle usuario en la base de datos.
+     *     Este campo representa la clave primaria del usuario en la base de datos.
      * </p>
      * */
     private Long id;
     /**
-     * <h5>Nombre de usuario</h5>
+     * <b>Nombre de usuario</b>
      * <p>
      *     Este campo corresponde al nombre de usuario el cual es único en el
      *     sistema.
@@ -39,18 +39,18 @@ public class SimpleUserDto {
      */
     private String username;
     /**
-     * <h5>First Name</h5>
+     * <b>First Name</b>
      * <p>Nombres del usuario</p>
      */
     private String firstName;
     /**
-     * <h5>Last Name</h5>
+     * <b>Last Name</b>
      * <p>Apellidos del usuario</p>
      */
     private String lastName;
 
     /**
-     * <h5>Email</h5>
+     * <b>Email</b>
      * <p>Correo electrónico del usuario, este es único en el sistema</p>
      */
     private String email;
