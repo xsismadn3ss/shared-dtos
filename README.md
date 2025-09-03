@@ -1,5 +1,5 @@
 # Shared DTOs
-DTOS públicos para reutilizarlos en los módulos a realizar para el proyecto en conjunto de la materia de **Ingeniría de Software**.
+DTOS públicos para reutilizarlos en los módulos a realizar para el proyecto en conjunto de la materia de **Ingeniería de Software**.
 El objetivo de este repositorio es recopilar todos los DTOs públicos que pueden existir en los módulos de cada equipo y que puedan
 ser accesible mediante esta librería, consiguiendo repetir menos código en cada proyecto.
 
