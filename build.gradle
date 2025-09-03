@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.colibrihub'
-version = '1.0.13'
+version = '1.0.14'
 
 repositories {
     mavenCentral()
@@ -22,6 +22,9 @@ test {
 java {
     withSourcesJar()
     withJavadocJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 publishing {
@@ -30,4 +33,15 @@ publishing {
             from components.java
         }
     }
+}
+
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+    failOnError = false
 }
