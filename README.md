@@ -20,3 +20,6 @@ dependencies{
   implementation 'com.github.xsismadn3ss:shared-dtos:vX.X.X'
 }
 ```
+
+## Jitpack releases
+🔗 [jitpack.io/#xsismadn3ss/shared-dtos](https://jitpack.io/#xsismadn3ss/shared-dtos)
