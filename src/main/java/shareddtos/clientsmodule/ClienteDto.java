@@ -7,5 +7,8 @@ package shareddtos.clientsmodule;
  * </p>
  */
 public class ClienteDto extends ClienteCreateDto {
+    /**
+     * Id del cliente
+     */
     private Long id;
 }
