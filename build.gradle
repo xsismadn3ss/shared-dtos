@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.colibrihub'
-version = '1.0.17'
+version = '1.0.19'
 
 repositories {
     mavenCentral()
@@ -13,6 +13,8 @@ repositories {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.34'
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
 }
 
 test {
