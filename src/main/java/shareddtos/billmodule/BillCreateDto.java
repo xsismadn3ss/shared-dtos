@@ -47,7 +47,7 @@ public class BillCreateDto {
 
     //products
     @NotEmpty(message = "Debe de almenos llevar un producto")
-    private List<ProductBill> products;
+    private List<ProductBillDTO> products;
 
     // Totals
     @PositiveOrZero(message = "Las ventas no gravadas deben ser mayor o igual a 0")
