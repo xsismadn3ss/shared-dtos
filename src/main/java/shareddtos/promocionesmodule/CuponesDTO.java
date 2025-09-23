@@ -71,4 +71,9 @@ public class CuponesDTO {
      */
     private LocalDateTime fecha_fin;
 
+    /**
+     * Relacion con la tabla de promocion
+     */
+    private Long promocionId
+
 }
