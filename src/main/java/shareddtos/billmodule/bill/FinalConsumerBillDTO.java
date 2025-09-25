@@ -1,4 +1,4 @@
-package shareddtos.billmodule;
+package shareddtos.billmodule.bill;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -6,11 +6,13 @@ import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import shareddtos.billmodule.BillItem.BillItemDTO;
 
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class ShowBillDto {
+public class FinalConsumerBillDTO {
+    private Long id;
     private String generationCode; 
     private String controlNumber; 
     private LocalDateTime billGenerationDate;
@@ -32,14 +34,15 @@ public class ShowBillDto {
     private String customerPhone;  
 
     //products
-    private List<ProductBillDTO> products;
+    private List<BillItemDTO> products;
 
     // Totals
     private double nonTaxedSales;
     private double exemptSales;
     private double taxedSales;
-    private double iva; 
+    private double iva; // 13% de IVA
     private double perceivedIva;
     private double withheldIva;
     private double totalWithIva;
+
 }

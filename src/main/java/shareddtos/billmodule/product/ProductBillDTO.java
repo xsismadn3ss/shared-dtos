@@ -1,4 +1,4 @@
-package shareddtos.billmodule;
+package shareddtos.billmodule.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
