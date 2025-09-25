@@ -1,6 +1,5 @@
 package shareddtos.billmodule.bill;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -38,12 +37,12 @@ public class FinalConsumerBillDTO {
     private List<BillItemDTO> products;
 
     // Totals
-    private BigDecimal nonTaxedSales;
-    private BigDecimal exemptSales;
-    private BigDecimal taxedSales;
-    private BigDecimal iva; // 13% de IVA
-    private BigDecimal perceivedIva;
-    private BigDecimal withheldIva;
-    private BigDecimal totalWithIva;
+    private Double nonTaxedSales;
+    private Double exemptSales;
+    private Double taxedSales;
+    private Double iva; // 13% de IVA
+    private Double perceivedIva;
+    private Double withheldIva;
+    private Double totalWithIva;
 
 }

@@ -1,6 +1,5 @@
 package shareddtos.billmodule.bill;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import jakarta.validation.constraints.NotBlank;
@@ -43,13 +42,13 @@ public class BillCreateDto {
 
     // Totals
     @PositiveOrZero(message = "Las ventas no gravadas deben ser mayor o igual a 0")
-    private BigDecimal nonTaxedSales;
+    private Double nonTaxedSales;
     @PositiveOrZero(message = "Las ventas exentas deben ser mayor o igual a 0")
-    private BigDecimal exemptSales;
+    private Double exemptSales;
     @PositiveOrZero(message = "Las ventas gravadas deben ser mayor o igual a 0")
-    private BigDecimal taxedSales;
+    private Double taxedSales;
     @PositiveOrZero(message = "El iva debe de ser mayor 0")
-    private BigDecimal perceivedIva;
-    private BigDecimal withheldIva;
+    private Double perceivedIva;
+    private Double withheldIva;
 
 }
