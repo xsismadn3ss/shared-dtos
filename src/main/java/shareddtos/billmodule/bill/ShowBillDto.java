@@ -1,5 +1,6 @@
 package shareddtos.billmodule.bill;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -37,11 +38,11 @@ public class ShowBillDto {
     private List<BillItemDTO> products;
 
     // Totals
-    private double nonTaxedSales;
-    private double exemptSales;
-    private double taxedSales;
-    private double iva; 
-    private double perceivedIva;
-    private double withheldIva;
-    private double totalWithIva;
+    private BigDecimal nonTaxedSales;
+    private BigDecimal exemptSales;
+    private BigDecimal taxedSales;
+    private BigDecimal iva; 
+    private BigDecimal perceivedIva;
+    private BigDecimal withheldIva;
+    private BigDecimal totalWithIva;
 }
